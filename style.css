@@ -14,7 +14,7 @@
     --main:#D864A9;
     --main2:#E8A0BF;
     --main3:#AA77FF;
-    --black:#10221b;
+    --black:#311B5E;
     --white:#fff;
     --light-bg:#eee;
     --border:.2rem solid var(--black);
@@ -25,6 +25,29 @@ html {
     overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 5rem;
+}
+section {
+    padding:5rem 9%;
+}
+.btn {
+    margin-top: 1rem;
+    display: inline-block;
+    border:var(--border);
+    color:var(--black);
+    cursor: pointer;
+    background: var(--white);
+    font-size: 1.7rem;
+    padding: 1rem 3rem;
+
+}
+.swiper-pagination-bullet {
+    width:2rem !important;
+    height:2rem !important;
+    background-color:var(--main) !important;
+}
+.btn:hover {
+    background-color: var(--black);
+    color:var(--white);
 }
 header {
     position:fixed;
@@ -129,8 +152,40 @@ form label {
 form label:hover {
     color:var(--main)
 }
+/* home*/
+.home{
+    padding:0;
+}
+.home .box {
+    min-height: 100vh;
+    display:flex;
+    align-items:first baseline;
+    background-size: cover !important;
+    background-position: center !important;
+    justify-content:center;
+    padding: 2rem 9%;
+}
+.box .content {
+    width:60rem;
+    padding:4rem;
+}
 
-
+.box .content span {
+    font-size: 4rem;
+    color:var(--black)
+}
+.box .content h3 {
+    font-size: 6rem;
+    color:var(--black);
+    padding-top: .5rem;
+    text-transform: uppercase;
+}
+.box .content p {
+    line-height: 2;
+    color:var(--white);
+    font-size: 1.5rem;
+    padding:1rem 0;
+}
 
 /* media query*/
 
@@ -138,11 +193,24 @@ form label:hover {
     .header {
         padding: 2rem;
     }
+    section {
+        padding:3rem 2rem;
+    }
 }
 @media (max-width:991px){
     html {
        font-size: 55%;
     }
+    .box .home{
+        justify-content: center;
+        padding: 2rem;
+    }
+    .box .content {
+       text-align: center;
+       margin-top: 20%;
+    }
+    
+    
 }
 @media (max-width:768px){
    #menu-btn {
@@ -174,10 +242,32 @@ form label:hover {
      position: absolute;
      top:1rem;right:2rem;
    }
+   .box .content {
+    text-align: center;
+    margin-top:20%;
+ }
 }
 
 @media (max-width:450px){
     html {
-       font-size: 50%;
+       font-size: 40%;
     }
+    .box .home{
+        justify-content: center;
+        padding: 2rem;
+    }
+    .box .content {
+       text-align: center;
+       margin-top:20%;
+    }
+    
+}
+@media (max-width:350px){
+    html {
+       font-size: 30%;
+    }
+    .box .content {
+        text-align: center;
+        margin-top:20%;
+     }
 }
