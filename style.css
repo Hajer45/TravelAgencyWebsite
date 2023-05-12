@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,300;0,400;0,500;0,600;1,100;1,600&display=swap');
+*{
+    font-family: 'Poppins', sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+    outline: none;
+    padding:0;
+    margin: 0;
+    text-transform: capitalize;
+    border:none;
+    transition: .2s linear;
+}
+:root {
+    --main:#D864A9;
+    --main2:#E8A0BF;
+    --main3:#AA77FF;
+    --black:#10221b;
+    --white:#fff;
+    --light-bg:#eee;
+    --border:.2rem solid var(--black);
+    --box-shadow :0 .5rem 1rem rgba(0,0,0,.1);
+}
+html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    scroll-padding-top: 5rem;
+}
+header {
+    position:fixed;
+    top:0;
+    left:0;
+    right:0;
+    padding:2rem 9%;
+    z-index:1000;
+    display:flex;
+    align-items: center;
+}
+header .logo {
+    margin-right:auto;
+    font-size:2.5rem;
+    color:var(--black);
+    font-weight: bolder;
+}
+.logo  i {
+    color:var(--main);
+}
+.navbar a {
+    margin-left:2rem;
+    font-size: 1.7rem;
+    color:var(--black);
+
+}
+.navbar a:hover {
+    color:var(--main);
+}
+.navbar #nav-close{
+    font-size: 5rem;
+    cursor:pointer;
+    color:var(--black);
+    display:none;
+}
+.icons a , .icons div{
+    font-size: 2.5rem;
+    margin-left:2rem;
+    cursor:pointer;
+    color:var(--black);
+    border:var(--main) solid 2px;
+    padding:5px 20px;
+    border-radius: 20px;
+}
+.icons a:hover , .icons div:hover{
+    color:var(--main);
+}
+#menu-btn {
+    display: none;
+}
+
+
+/* media query*/
+
+@media (max-width:1200px){
+    .header {
+        padding: 2rem;
+    }
+}
+@media (max-width:991px){
+    html {
+       font-size: 55%;
+    }
+}
+@media (max-width:768px){
+   #menu-btn {
+        display: inline-block;
+   }
+   .navbar {
+    position:fixed;
+    top:0;
+    left:-110%;
+    background-color: var(--white);
+    z-index: 10000;
+    width:35rem;
+    height:100%;
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+   }
+   .navbar.active {
+    left:0;
+    box-shadow: 0 0 0 100vw rgba(0,0,0,.8);
+   }
+   .navbar a {
+    margin:1rem 0;
+    font-size: 3rem;
+   }
+   .navbar #nav-close {
+     display: block;
+     position: absolute;
+     top:1rem;right:2rem;
+   }
+}
+
+@media (max-width:450px){
+    html {
+       font-size: 50%;
+    }
+}
